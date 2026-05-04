@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-ring"></div>
+      <div class="loader-ring"></div>
+      <span>Loading portfolio</span>
+    </div>
+  </div>
+
+  <header class="topbar blur-layer">
+    <div class="container topbar-inner">
+      <a class="brand" href="#hero">Nova</a>
+      <nav class="navbar" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#certifications">Certificates</a>
+        <a href="#achievements">Timeline</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle light and dark mode">
+          <span class="theme-icon">☀️</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section" id="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content container">
+        <p class="eyebrow">Welcome to my digital studio</p>
+        <h1 class="hero-title">Hi, I’m <span id="heroName">Your Name</span>.</h1>
+        <p class="hero-subtitle" id="heroIntro">A premium experience designer building modern digital stories.</p>
+        <div class="typewriter-wrap">
+          <span class="typewriter-text" id="typingText"></span>
+        </div>
+        <div class="hero-actions">
+          <a href="#achievements" class="btn btn-primary">Explore timeline</a>
+          <a href="#contact" class="btn btn-secondary">Let’s connect</a>
+        </div>
+      </div>
+      <div class="hero-decor">
+        <div class="glow-circle"></div>
+        <div class="hero-card reveal-card">
+          <div class="card-label">Featured</div>
+          <h3>Design System Redesign</h3>
+          <p>Brand refresh with motion-led interfaces and premium documentation.</p>
+        </div>
+        <div class="hero-card hero-card-small reveal-card">
+          <span>+20</span>
+          <p>High-impact product launches delivered.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-section reveal" id="about">
+      <div class="container section-grid">
+        <div class="section-head">
+          <p class="eyebrow">About me</p>
+          <h2>Crafting modern experiences that feel premium and intuitive.</h2>
+          <p id="aboutBio">I am a senior product designer and frontend developer focused on building beautiful digital experiences for startups and forward-thinking brands. My work blends premium minimalism with motion-driven clarity, always with a strong focus on usability and emotional resonance.</p>
+        </div>
+        <div class="about-card glass-card">
+          <div class="profile-frame">
+            <img id="profilePhoto" class="profile-photo" src="assets/profile.jpg" alt="Behruzbek Shokirov" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills-section reveal" id="skills">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Skills</p>
+          <h2>Technical craft meets modern motion.</h2>
+          <p>Explore the capabilities I bring to every product, interface, and brand system.</p>
+        </div>
+        <div class="skills-grid" id="skillsGrid"></div>
+      </div>
+    </section>
+
+    <section class="section interests-section reveal" id="interests">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Interests</p>
+          <h2>What fuels my curiosity and creative flow.</h2>
+          <p>From immersive products to future-facing trends, these are the areas where I stay inspired.</p>
+        </div>
+        <div class="interest-grid" id="interestsGrid"></div>
+      </div>
+    </section>
+
+    <section class="section achievements-section reveal" id="achievements">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Achievement timeline</p>
+          <h2>Milestones that shape the portfolio.</h2>
+          <p>From early product launches to strategic collaborations, every step has been about quality and growth.</p>
+        </div>
+        <div class="timeline" id="timeline"></div>
+      </div>
+    </section>
+
+    <section class="section certifications-section reveal" id="certifications">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Certifications</p>
+          <h2>Verified credentials and qualifications.</h2>
+          <p>Professional certifications demonstrating expertise and continuous learning commitment.</p>
+        </div>
+        <div class="certifications-grid" id="certificationsGrid"></div>
+      </div>
+    </section>
+
+    <section class="section contact-section reveal" id="contact">
+      <div class="container section-grid">
+        <div>
+          <div class="section-head">
+            <p class="eyebrow">Contact</p>
+            <h2>Ready to build the next premium experience?</h2>
+            <p>Send a note and I’ll respond with a quick proposal.</p>
+          </div>
+          <div class="contact-info glass-card contact-panel">
+            <p><strong>Email</strong><br /><a href="mailto:hello@novaportfolio.dev" id="contactEmail">hello@novaportfolio.dev</a></p>
+            <p><strong>Location</strong><br /><span id="contactLocation">Remote / Global</span></p>
+            <div class="social-links" id="socialLinks"></div>
+          </div>
+        </div>
+        <form class="contact-form glass-card" id="contactForm">
+          <label>Full name<input type="text" name="name" placeholder="Jane Doe" required></label>
+          <label>Email address<input type="email" name="email" placeholder="jane@example.com" required></label>
+          <label>Message<textarea name="message" placeholder="Tell me about your project..." rows="5" required></textarea></label>
+          <button type="submit" class="btn btn-primary">Send message</button>
+          <p class="form-note">This form is frontend only. You can connect it to your email or platform later.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer blur-layer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="footerYear"></span> Designed and built by <span id="footerName">Your Name</span>.</p>
+      <p>Made with motion, glass, and subtlety.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
